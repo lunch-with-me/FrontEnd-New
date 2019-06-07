@@ -44,6 +44,14 @@ export class MyserviceService {
     }
     return false;
   }
+
+  locationSearch(lat, lon){
+    //return this._http.get(this.host + 'users/location?lng=' + lon + '&lat='+lat,{
+    return this._http.get('http://localhost:4008/api/users?lng=' + lon + '&lat='+lat,{
+      observe:'body',
+      headers:new HttpHeaders().append('Content-Type','application/json')
+    });
+  }
   // getTelephoneNuber() {
   //   return this._http.get('http://localhost:3003/usersRegi/telephone', {
   //     observe: 'body',

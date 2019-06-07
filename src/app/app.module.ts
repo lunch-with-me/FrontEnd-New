@@ -35,6 +35,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
+import { LocationComponent } from './location/location.component';
 
 
 
@@ -50,6 +51,7 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     MyprofileComponent,
     SettingsComponent,
     AlertDialogComponent,
+    LocationComponent,
   
    
   ],
