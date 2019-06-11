@@ -22,6 +22,7 @@ export class LocationComponent implements OnInit {
         (position) => {
           this.lat = position.coords.latitude;
           this.lon = position.coords.longitude;
+          this.submit();
         }, (error) => {
           console.log(error);
         });

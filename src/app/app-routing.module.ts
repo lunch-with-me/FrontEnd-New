@@ -11,6 +11,7 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LocationComponent } from './location/location.component';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -29,7 +30,11 @@ const routes: Routes = [
   {path:'myprofile',component:MyprofileComponent},
   {path:'settings',component:SettingsComponent},
   {path:'alertdialog',component:AlertDialogComponent},
-  {path:'location',component:LocationComponent}
+  {path:'location',component:LocationComponent},  
+  {
+    path:'chat',
+    component: ChatComponent
+  }
 ];
 
 @NgModule({

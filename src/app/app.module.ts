@@ -36,6 +36,7 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
 import { LocationComponent } from './location/location.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 
@@ -52,6 +53,7 @@ import { LocationComponent } from './location/location.component';
     SettingsComponent,
     AlertDialogComponent,
     LocationComponent,
+    ChatComponent,
   
    
   ],
