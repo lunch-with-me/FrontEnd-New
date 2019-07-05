@@ -12,6 +12,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { LocationComponent } from './location/location.component';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
 import { ChatComponent } from './chat/chat.component';
+import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path:'chat',
     component: ChatComponent
+  },
+  {
+    path:'map',
+    component: MapComponent
   }
 ];
 

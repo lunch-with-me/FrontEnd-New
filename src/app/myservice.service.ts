@@ -65,4 +65,12 @@ export class MyserviceService {
     });
   }
 
+  map(lat, lon){
+    console.log(lat);
+    return this._http.get(this.host + 'users/locationAdd/' + localStorage.getItem('id') + '?lng=' + lon + '&lat='+lat,{
+      observe:'body',
+      headers:new HttpHeaders().append('Content-Type','application/json')
+    });
+  }
+
 }

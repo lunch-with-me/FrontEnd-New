@@ -38,6 +38,10 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
 import { LocationComponent } from './location/location.component';
 import { ChatComponent } from './chat/chat.component';
 
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './map/map.component';
+import { CommonModule } from '@angular/common';
+
 
 
 @NgModule({
@@ -54,11 +58,14 @@ import { ChatComponent } from './chat/chat.component';
     AlertDialogComponent,
     LocationComponent,
     ChatComponent,
+    MapComponent,
   
    
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatInputModule,
@@ -81,7 +88,10 @@ import { ChatComponent } from './chat/chat.component';
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDIMpYY2k6FMyXAK9T-t1677iXCUHan2h8'
+    })
   ],
   providers: [ MyserviceService],
   bootstrap: [AppComponent]
