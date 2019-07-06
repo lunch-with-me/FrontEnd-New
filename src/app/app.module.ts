@@ -41,6 +41,7 @@ import { ChatComponent } from './chat/chat.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './map/map.component';
 import { CommonModule } from '@angular/common';
+import { ActiveComponent } from './active/active.component';
 
 
 
@@ -59,6 +60,7 @@ import { CommonModule } from '@angular/common';
     LocationComponent,
     ChatComponent,
     MapComponent,
+    ActiveComponent,
   
    
   ],

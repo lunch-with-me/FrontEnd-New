@@ -13,6 +13,7 @@ import { LocationComponent } from './location/location.component';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
 import { ChatComponent } from './chat/chat.component';
 import { MapComponent } from './map/map.component';
+import { ActiveComponent } from './active/active.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
         { path: 'login', component: LoginComponent },
         { path: 'register', component: RegisterComponent },
         { path: 'change_password', component: ChangePasswordComponent },
+        {path:'active',component:ActiveComponent},
       ]
   },
 

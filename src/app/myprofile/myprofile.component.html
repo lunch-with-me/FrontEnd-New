@@ -1,64 +1,72 @@
 <div class="container">
     
       
-    <div class="headerbar">
-    
+  <div class="headerbar">
+  
 
-        <button mat-raised-button color="primary" (click)="movetodashboard()"><mat-icon aria-label="Example icon-button with a heart icon">arrow_back</mat-icon></button>
+      <button mat-raised-button color="primary" (click)="movetodashboard()"><mat-icon aria-label="Example icon-button with a heart icon">arrow_back</mat-icon></button>
 
-      <div class="header_name">
-    <span>Lunch With ME- My profile</span>
+    <div class="header_name">
+  <span>Lunch With ME- My profile</span>
 
-    </div><!--headder name"-->
-    </div><!-- headerbar-->
+  </div><!--headder name"-->
+  </div><!-- headerbar-->
 
 
 
-    <div class="boom">
-     <form #imageForm = ngForm>
-        <img [src]="imageUrl"   style="width:250px;height:200px">
-        <input type="file" #Image accept="image/*" (change)= "handleFileInput($event.target.files)">
-        <button type="submit" class="btn-largr-btn-submit"> submit</button>
-     </form>
- <br>
+  <div class="boom">
+   <form #imageForm = ngForm>
+      <img [src]="imageUrl"   style="width:250px;height:200px">
+      <input type="file" #Image accept="image/*" (change)= "handleFileInput($event.target.files)">
+      <button type="submit" class="btn-largr-btn-submit"> submit</button>
+   </form>
+<br>
 
-       <label>Email Address</label>
-       <br>
-       <mat-label>{{email}}</mat-label>
-       <ul></ul>
+     <label>Email Address</label>
+     <br>
+     <mat-label>{{email}}</mat-label>
+     <ul></ul>
 
-       <label>Edit User Name</label> 
+     <label>Edit Name</label> 
+     <br>
+      <mat-form-field appearance="standard">  
+      <mat-label>{{fullname}}</mat-label>
+        <input matInput placeholder="Edit your name">
+        <mat-icon matSuffix>edit</mat-icon>
+       </mat-form-field>
+    <br>
+       <label>Edit Telephone Number</label> 
        <br>
         <mat-form-field appearance="standard">  
-        <mat-label>{{username}}</mat-label>
-          <input matInput placeholder="Edit your name">
+          <mat-label>{{telephone}}</mat-label>
+          <input matInput placeholder="Edit your Telephone Number">
           <mat-icon matSuffix>edit</mat-icon>
          </mat-form-field>
-      <br>
-         <label>Edit Telephone Number</label> 
          <br>
-          <mat-form-field appearance="standard">  
-          <mat-label>{{email}}</mat-label>
-            <input matInput placeholder="Edit your name">
+     <label>Edit gender</label> 
+     <br>
+      <mat-form-field appearance="standard">  
+        <mat-label>{{gender}}</mat-label>
+        <input matInput placeholder="Edit your gender">
+        <mat-icon matSuffix>edit</mat-icon>
+       </mat-form-field>
+       <br>
+     <label>Edit self discription</label> 
+     <br>
+      <mat-form-field appearance="standard">  
+      <mat-label>{{message}}</mat-label>
+        <input matInput placeholder="Edit self discription">
+        <mat-icon matSuffix>edit</mat-icon>
+       </mat-form-field>
+        <br>
+        <label>Edit profession</label> 
+        <br>
+        <mat-form-field appearance="standard">  
+          <mat-label>{{profession}}</mat-label>
+            <input matInput placeholder="Edit your profession">
             <mat-icon matSuffix>edit</mat-icon>
            </mat-form-field>
-           <br>
-       <label>Edit User Name</label> 
-       <br>
-        <mat-form-field appearance="standard">  
-        <mat-label></mat-label>
-          <input matInput placeholder="Edit your name">
-          <mat-icon matSuffix>edit</mat-icon>
-         </mat-form-field>
-         <br>
-       <label>Edit User Name</label> 
-       <br>
-        <mat-form-field appearance="standard">  
-        <mat-label></mat-label>
-          <input matInput placeholder="Edit your name">
-          <mat-icon matSuffix>edit</mat-icon>
-         </mat-form-field>
-<br>
-    </div><!--boom-->
+            <br>
+  </div><!--boom-->
 
-    </div><!--container-->
+  </div><!--container-->
