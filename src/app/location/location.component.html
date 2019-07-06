@@ -1,0 +1,23 @@
+<div style="background-color: #1b8f76">
+  <h1 class="title">Lunch With Me(Grow Your Connections) - Available Users Around You</h1>
+  <div id="homepage">
+      <h1>Give more value to your meetups!</h1>
+      <div id="users">
+        <div data-reactroot="" id="user-container">
+          <!-- <form id="search">
+            <label>Enter your Latitude:</label><input type="text" placeholder="latitude" required="" name="lat" [(ngModel)]="lat">
+            <label>Enter your Longitude:</label><input type="text" placeholder="longitude" required="" name="lon" [(ngModel)]="lon">
+            <input type="submit" value="Find Users" (click)="submit()">
+          </form> -->
+
+          <ul *ngIf="users">
+            <li *ngFor="let u of users"><span class="true"></span>
+              <span class="name">{{u.obj.name}}</span>
+              <span class="rank">{{u.obj.rank}}</span>
+              <span class="dist">{{u.dis}} km</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>

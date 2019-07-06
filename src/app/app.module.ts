@@ -35,6 +35,12 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
+import { LocationComponent } from './location/location.component';
+import { ChatComponent } from './chat/chat.component';
+
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './map/map.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -50,11 +56,16 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     MyprofileComponent,
     SettingsComponent,
     AlertDialogComponent,
+    LocationComponent,
+    ChatComponent,
+    MapComponent,
   
    
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatInputModule,
@@ -77,7 +88,10 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDIMpYY2k6FMyXAK9T-t1677iXCUHan2h8'
+    })
   ],
   providers: [ MyserviceService],
   bootstrap: [AppComponent]

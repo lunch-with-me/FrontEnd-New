@@ -44,6 +44,13 @@ export class MyserviceService {
     }
     return false;
   }
+
+  locationSearch(lat, lon){
+    return this._http.get(this.host + 'users/location?lng=' + lon + '&lat='+lat,{
+      observe:'body',
+      headers:new HttpHeaders().append('Content-Type','application/json')
+    });
+  }
   // getTelephoneNuber() {
   //   return this._http.get('http://localhost:3003/usersRegi/telephone', {
   //     observe: 'body',
@@ -53,6 +60,14 @@ export class MyserviceService {
 
   submitRegi(body:any){
     return this._http.post(this.host + 'auth/registerdetails', body,{
+      observe:'body',
+      headers:new HttpHeaders().append('Content-Type','application/json')
+    });
+  }
+
+  map(lat, lon){
+    console.log(lat);
+    return this._http.get(this.host + 'users/locationAdd/' + localStorage.getItem('id') + '?lng=' + lon + '&lat='+lat,{
       observe:'body',
       headers:new HttpHeaders().append('Content-Type','application/json')
     });

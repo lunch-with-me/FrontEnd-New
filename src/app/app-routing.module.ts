@@ -9,8 +9,10 @@ import { RegisterDetailsComponent } from './register-details/register-details.co
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SettingsComponent } from './settings/settings.component';
+import { LocationComponent } from './location/location.component';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
-
+import { ChatComponent } from './chat/chat.component';
+import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -28,7 +30,16 @@ const routes: Routes = [
   {path: 'registerdetails' , component: RegisterDetailsComponent},
   {path:'myprofile',component:MyprofileComponent},
   {path:'settings',component:SettingsComponent},
-  {path:'alertdialog',component:AlertDialogComponent}
+  {path:'alertdialog',component:AlertDialogComponent},
+  {path:'location',component:LocationComponent},  
+  {
+    path:'chat',
+    component: ChatComponent
+  },
+  {
+    path:'map',
+    component: MapComponent
+  }
 ];
 
 @NgModule({
