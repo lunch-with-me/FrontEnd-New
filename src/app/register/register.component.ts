@@ -64,11 +64,11 @@ localStorage.setItem("email",this.myForm.value.email)
         .subscribe(
           data => {
             console.log("efrfrf4rffrf");
-            this.successMessage = 'Registration Success';
-             this._router.navigate(['/registerdetails']);
+            this.successMessage = 'Account Registered!. Please check your Email for Activation Link';
+            // this._router.navigate(['/registerdetails']);
           
           },
-          error => this.successMessage = 'Some error'
+          error => this.successMessage = 'Internal error.Please try again'
         );
     }
   }

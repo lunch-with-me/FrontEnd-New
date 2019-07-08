@@ -20,7 +20,7 @@ export class UserDashboardComponent implements OnInit {
   
 
   ngOnInit() {
-    this.username= this.myService.getUserName(); 
+    //this.username= this.myService.getUserName(); 
     if(!this.myService.loggedIn())  
       this._router.navigate(['/main/login']);
   }

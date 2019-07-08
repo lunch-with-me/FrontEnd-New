@@ -18,10 +18,14 @@ export class MyserviceService {
       observe:'body'
     });
   }
-
+  
   getUserName() {
-    return localStorage.getItem('username');
+    return this._http.get(this.host+ 'auth/profile', {
+          observe: 'body',
+          params: new HttpParams().append('token', localStorage.getItem('token'))
+        });
   }
+
 
   getEmail() {
     return localStorage.getItem('email');
@@ -45,6 +49,12 @@ export class MyserviceService {
     return false;
   }
 
+  active()
+  {
+    return this._http.put(this.host + 'auth/active',{});
+  }
+
+  
   locationSearch(lat, lon){
     return this._http.get(this.host + 'users/location?lng=' + lon + '&lat='+lat,{
       observe:'body',
@@ -72,5 +82,14 @@ export class MyserviceService {
       headers:new HttpHeaders().append('Content-Type','application/json')
     });
   }
+
+
+
+  resetpassword(body:any){
+  
+    return this._http.post(this.host+ 'auth/resetpassword', body,{});
+  
+}
+
 
 }

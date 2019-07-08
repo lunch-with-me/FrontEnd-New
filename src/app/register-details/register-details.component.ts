@@ -22,10 +22,6 @@ import { AlertDialogComponent } from '../alert-dialog/alert-dialog.component';
 export class RegisterDetailsComponent implements OnInit {
 
 
-  // @Input('username') userName:string;
-
-  
-
   imageUrl:string = "/assets/images/default.png";
   fileToUpload: File = null;
 

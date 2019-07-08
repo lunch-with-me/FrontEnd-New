@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class AlertDialogComponent implements OnInit {
 
-  
   constructor( public dialogRef: MatDialogRef<AlertDialogComponent>,@Inject(MAT_DIALOG_DATA) public data: any,private myService:MyserviceService,private _router: Router) {}
 
 

@@ -12,44 +12,58 @@ export class MyprofileComponent implements OnInit {
   imageUrl:string = "/assets/images/default.png";
   fileToUpload: File = null;
 
-
   username = '';
   email =  '';
+  telephone='';
+  gender='';
+  message=''; 
+  profession='';
   constructor(private myService:MyserviceService,private _router: Router) { 
 
-    this.username= this.myService.getUserName();
-    this.email= this.myService.getEmail();
-  //    error=>this._router.navigate(['/login'])
-// // this.myService.getTelephoneNuber()
-// .subscribe(
-//   data => this.telephone= data.toString(),
-// //    error=>this._router.navigate(['/login'])
-// )
-
-  }
-
-  
-
-
-  
-  ngOnInit() {
-  }
-
-
-
-  movetodashboard() {
-    this._router.navigate(['../dash']);
-  }
-
-handleFileInput(file :FileList){
-  this.fileToUpload = file.item(0);
-  //show image preview
-
-  var reader = new FileReader();
-  reader.onload =(event:any)=>{
-    this.imageUrl = event.target.result;
-  }
-reader.readAsDataURL(this.fileToUpload);
-}
-
-}
+    
+    //  this.email= this.myService.getEmail();
+      
+      
+     this.myService.getUserName()
+     console.log("Cccc")
+    //.subscribe(
+       data => {
+         console.log(data)
+        this.email= data.email.toString()
+       //  this.fullname= data.fullname.toString()
+        this.gender=data.gender.toString()
+         this.telephone= data.telephone.toString()
+         this.message=data.message.toString()
+         this.profession=data.profession.toString()
+       }
+       
+    // )
+ 
+     }
+ 
+   
+ 
+ 
+   
+   ngOnInit() {
+   }
+ 
+ 
+ 
+   movetodashboard() {
+     this._router.navigate(['../dash']);
+   }
+ 
+ handleFileInput(file :FileList){
+   this.fileToUpload = file.item(0);
+   //show image preview
+ 
+   var reader = new FileReader();
+   reader.onload =(event:any)=>{
+     this.imageUrl = event.target.result;
+   }
+ reader.readAsDataURL(this.fileToUpload);
+ }
+ 
+ }
+ 

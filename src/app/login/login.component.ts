@@ -9,7 +9,6 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   loginForm: FormGroup;
   successMessage: String = '';
   constructor(private _myservice: MyserviceService,private _router: Router,private _activatedRoute: ActivatedRoute) {
@@ -38,16 +37,14 @@ export class LoginComponent implements OnInit {
           data => {
             console.log(data);
             localStorage.setItem('token', data['token']);
-            localStorage.setItem('role', data['role']);
-            localStorage.setItem('username', data['username']);
+            localStorage.setItem('role', data['']);
+            localStorage.setItem('username', data['name']);
             localStorage.setItem('email', data['email']);
-            localStorage.setItem('id', data['id']);
-            // this._router.navigate(['/dash']);
-            this._router.navigate(['/map']);
+            this._router.navigate(['/dash']);
           },
           error => {
             console.log(error);
-            this.successMessage = 'Email and Password does not match';
+            this.successMessage = 'Email and Password does not match or valid your email please';
           }
         );
     }
